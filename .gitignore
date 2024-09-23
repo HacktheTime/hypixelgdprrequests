@@ -1,0 +1,40 @@
+### IntelliJ IDEA ###
+out/
+!src/main/kotlin/main/**/out/
+!src/main/kotlin/test/**/out/
+
+### Kotlin ###
+.kotlin
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!src/main/kotlin/main/**/bin/
+!src/main/kotlin/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+/src/test/resources/chat/
+/src/test/resources/data/
+/src/test/resources/developer/
+/src/test/resources/housing/
+/src/test/resources/skyblock/
+/src/test/resources/smp/
+/src/test/resources/hypixel-request.zip
+/src/test/resources/README.txt
