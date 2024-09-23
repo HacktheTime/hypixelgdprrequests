@@ -24,6 +24,7 @@ class Analyzer {
         // Simulate analysis process
         SwingUtilities.invokeLater {
             feedback = FeedbackPopup("GPDR DATA Analyser")
+            Thread({ feedback.isVisible = true }).start()
             // Create a temporary directory for unpacking
             feedback.appendMessage("Creating Tempdir")
             val tempDir = createTempDir()
@@ -46,6 +47,8 @@ class Analyzer {
                 tempDir.deleteRecursively()
                 // Return null via callback
             }
+
+            println("Done")
         }
     }
 

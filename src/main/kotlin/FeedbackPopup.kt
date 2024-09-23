@@ -5,7 +5,7 @@ import javax.swing.event.ChangeEvent
 import javax.swing.event.DocumentEvent
 import javax.swing.event.DocumentListener
 
-class FeedbackPopup(title: String? ) : JDialog(null as Frame?, title, true) {
+class FeedbackPopup(title: String?) : JDialog(null as Frame?, title, true) {
     private val textArea: JTextArea
     private val scrollPane: JScrollPane
     private var isAtBottom = true
@@ -14,7 +14,6 @@ class FeedbackPopup(title: String? ) : JDialog(null as Frame?, title, true) {
         setSize(400, 300)
         setLocationRelativeTo(owner)
         defaultCloseOperation = DISPOSE_ON_CLOSE
-
         textArea = JTextArea()
         textArea.isEditable = false
         scrollPane = JScrollPane(textArea)
@@ -43,6 +42,7 @@ class FeedbackPopup(title: String? ) : JDialog(null as Frame?, title, true) {
         val closeButton = JButton("Close")
         closeButton.addActionListener { dispose() }
         add(closeButton, BorderLayout.SOUTH)
+        repaint()
     }
 
     fun appendMessage(message: String) {
